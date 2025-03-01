@@ -1,0 +1,24 @@
+.header {
+  width: 100vw;
+  height: 70px;
+  background-color: black;
+  color: white;
+}
+
+.header > nav {
+  height: 100%;
+}
+
+.header > nav > ol {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.header > nav > ol > li {
+  list-style-type: none;
+  padding: 10px;
+  cursor: pointer;
+}

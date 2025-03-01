@@ -1,0 +1,11 @@
+.main {
+  align-self: center;
+  height: calc(100vh - 70px);
+  width: 90%;
+  padding: 20px;
+  background-color: rgb(158, 158, 158);
+}
+
+.main h1 {
+  text-align: center;
+}

@@ -1,0 +1,16 @@
+.input-task {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+.input-task input {
+  height: 50px;
+  margin: 0 10px;
+  padding: 0 10px;
+}
+
+.input-task button {
+  margin: 0 5px;
+}
