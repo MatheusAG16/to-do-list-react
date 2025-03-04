@@ -1,4 +1,4 @@
-button {
+.btn-principal {
   width: 80px;
   height: 50px;
   background-color: rgb(56, 56, 56);
@@ -9,11 +9,11 @@ button {
   transition: transform 0.1s;
 }
 
-button:active {
+.btn-principal:active {
   transform: scale(0.95);
 }
 
-button:hover {
+.btn-principal:hover {
   color: #d3b8ff;
   cursor: pointer;
 }

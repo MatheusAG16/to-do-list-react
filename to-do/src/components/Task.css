@@ -1,0 +1,40 @@
+.task {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 40px;
+  width: 50%;
+  min-width: 350px;
+  max-width: 500px;
+  background-color: rgb(133, 133, 133);
+  color: rgb(0, 0, 0);
+  font-size: 1.3em;
+  justify-self: center;
+  margin: 5px;
+  padding: 0 0 0 10px;
+}
+
+.btn-flex {
+  width: 25%;
+  height: 100%;
+}
+
+.btn-task {
+  width: calc(50% - 2px);
+  height: 100%;
+  margin: 0 0 0 2px;
+  background-color: rgb(56, 56, 56);
+  color: white;
+  font-size: 1em;
+  border: none;
+  transition: transform 0.1s;
+}
+
+.btn-task:active {
+  transform: scale(0.95);
+}
+
+.btn-task:hover {
+  color: #d3b8ff;
+  cursor: pointer;
+}

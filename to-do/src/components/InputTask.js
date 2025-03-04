@@ -1,8 +1,26 @@
 import React from "react";
+import { useState } from "react";
 import Button from "./Button";
 import "./InputTask.css";
 
-function InputTask() {
+function InputTask({ addTask }) {
+  const [inputValue, setInputValue] = useState("");
+
+  const handleInputChage = (event) => {
+    setInputValue(event.target.value);
+  };
+
+  const handleAddTask = () => {
+    if (inputValue.trim() !== "") {
+      addTask(inputValue);
+      setInputValue("");
+    }
+  };
+
+  const teste = () => {
+    console.log("Teste");
+  };
+
   return (
     <div className="input-task">
       <input
@@ -10,9 +28,10 @@ function InputTask() {
         name="n-input-task"
         id="i-input-task"
         placeholder="Digite sua tarefa"
+        onChange={handleInputChage}
       />
-      <Button value="+" />
-      <Button value="-" />
+      <Button value="+" onClick={handleAddTask} />
+      <Button value="-" onClick={teste} />
     </div>
   );
 }

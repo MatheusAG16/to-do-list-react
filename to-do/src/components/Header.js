@@ -1,15 +1,14 @@
 import React from "react";
 import "./Header.css";
 
-function Header() {
+function Header({ setCurrentView }) {
   return (
     <div className="header">
       <nav>
         <ol>
-          <li>Home</li>
-          <li>Concluidos</li>
-          <li>Lista de Tarefas</li>
-          <li>Entrar</li>
+          <li onClick={() => setCurrentView("completed")}>Concluidos</li>
+          <li onClick={() => setCurrentView("active")}>Lista de Tarefas</li>
+          <li onClick={() => setCurrentView("removed")}>Removidas</li>
         </ol>
       </nav>
     </div>
