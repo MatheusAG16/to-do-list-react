@@ -6,9 +6,12 @@ function Header({ setCurrentView }) {
     <div className="header">
       <nav>
         <ol>
-          <li onClick={() => setCurrentView("completed")}>Concluidos</li>
-          <li onClick={() => setCurrentView("active")}>Lista de Tarefas</li>
-          <li onClick={() => setCurrentView("removed")}>Removidas</li>
+          <li onClick={() => setCurrentView("completed")} id={"verde"}>
+            Concluidos
+          </li>
+          <li onClick={() => setCurrentView("active")} id={"roxo"}>
+            Lista de Tarefas
+          </li>
         </ol>
       </nav>
     </div>

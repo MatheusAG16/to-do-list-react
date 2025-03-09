@@ -1,27 +1,35 @@
 import React from "react";
 import "./Task.css";
 
-function Task({ text, taskKey, concludeTask, removeTask }) {
+function Task({ index, text, completeTask, removeTask, currentView }) {
   const handleRemoveTask = () => {
-    removeTask(taskKey);
+    removeTask(index);
   };
 
-  const handleConcludeTask = () => {
-    concludeTask(taskKey);
+  const handleCompleteTask = () => {
+    completeTask(index);
   };
 
   return (
-    <div className="task">
-      {text}
-      <div className="btn-flex">
-        <button className="btn-task" onClick={handleRemoveTask}>
+    <li
+      className={"task"}
+      id={currentView === "active" ? "roxo" : "task-verde"}
+    >
+      {index} - {text}
+      <div className={"btn__exclude__complete"}>
+        <button className={"btn-task"} onClick={handleRemoveTask}>
           X
         </button>
-        <button className="btn-task" onClick={handleConcludeTask}>
+        <button
+          className={
+            currentView === "active" ? "btn-task" : "btn-task btn-task-none"
+          }
+          onClick={handleCompleteTask}
+        >
           C
         </button>
       </div>
-    </div>
+    </li>
   );
 }
 

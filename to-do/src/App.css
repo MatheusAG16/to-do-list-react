@@ -7,7 +7,11 @@
 .container {
   display: flex;
   flex-direction: column;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
-  background-color: rgb(94, 82, 114);
+  background-color: rgb(148, 102, 223);
+}
+
+.completed {
+  background-color: rgb(100, 236, 100);
 }

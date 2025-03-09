@@ -3,7 +3,7 @@ import { useState } from "react";
 import Button from "./Button";
 import "./InputTask.css";
 
-function InputTask({ addTask }) {
+function InputTask({ addTask, removedTaskList, completedTaskList }) {
   const [inputValue, setInputValue] = useState("");
 
   const handleInputChage = (event) => {
@@ -18,15 +18,14 @@ function InputTask({ addTask }) {
   };
 
   const teste = () => {
-    console.log("Teste");
+    console.log("removido" + removedTaskList);
+    console.log("complete" + completedTaskList);
   };
 
   return (
     <div className="input-task">
       <input
         type="text"
-        name="n-input-task"
-        id="i-input-task"
         placeholder="Digite sua tarefa"
         onChange={handleInputChage}
       />

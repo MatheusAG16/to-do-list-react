@@ -1,50 +1,23 @@
 import React from "react";
-import { useState } from "react";
-import InputTask from "./InputTask";
-// import Main from "./Main";
 import Task from "./Task";
+import "./TaskList.css";
 
-function TaskList({
-  title,
-  tasks,
-  setTasks,
-  removedTasks,
-  setRemovedTasks,
-  completedTasks,
-  setCompletedTasks,
-}) {
-  const addTask = (text) => {
-    setTasks([...tasks, text]);
-  };
-
-  const removeTask = (taskKey) => {
-    let copyTasks = [...tasks];
-    let removedTask = copyTasks.splice(taskKey, 1);
-
-    let copyRemovedTasks = [...removedTasks];
-    copyRemovedTasks.push(removedTask[0]);
-
-    setRemovedTasks(copyRemovedTasks);
-    setTasks(copyTasks);
-  };
-
-  const concludeTask = (currentView) => {
-    console.log(`testando função ` + currentView);
-  };
+function TaskList({ currentList, removeTask, completeTask, currentView }) {
   return (
-    <>
-      <h1>{title}</h1>
-      {<InputTask addTask={addTask} />}
-      {tasks.map((task, index) => (
-        <Task
-          key={index}
-          text={task}
-          taskKey={index}
-          removeTask={removeTask}
-          concludeTask={concludeTask}
-        />
-      ))}
-    </>
+    <ul className="taskList">
+      {currentList.map((text, index) => {
+        return (
+          <Task
+            key={index}
+            index={index}
+            text={text}
+            removeTask={removeTask}
+            completeTask={completeTask}
+            currentView={currentView}
+          />
+        );
+      })}
+    </ul>
   );
 }
 

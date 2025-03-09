@@ -6,7 +6,7 @@
   width: 50%;
   min-width: 350px;
   max-width: 500px;
-  background-color: rgb(133, 133, 133);
+  background-color: rgb(148, 102, 223);
   color: rgb(0, 0, 0);
   font-size: 1.3em;
   justify-self: center;
@@ -14,9 +14,13 @@
   padding: 0 0 0 10px;
 }
 
-.btn-flex {
-  width: 25%;
+#task-verde {
+  background-color: rgb(100, 236, 100);
+}
+
+div.btn__exclude__complete {
   height: 100%;
+  width: 4em;
 }
 
 .btn-task {
@@ -28,6 +32,11 @@
   font-size: 1em;
   border: none;
   transition: transform 0.1s;
+}
+
+.btn-task-none {
+  color: gray;
+  background-color: rgb(85, 85, 85);
 }
 
 .btn-task:active {
